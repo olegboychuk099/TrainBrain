@@ -1,15 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package signup;
 
-import javafx.scene.input.DragEvent;
+import java.awt.event.*;
+
 import keeptoo.Drag;
 
 /**
- *
  * @author Олег
  */
 public class SignIn extends javax.swing.JFrame {
@@ -62,7 +57,7 @@ public class SignIn extends javax.swing.JFrame {
         });
         signInPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        username.setBackground(new java.awt.Color(0,0,0,0));
+        username.setBackground(new java.awt.Color(0, 0, 0, 0));
         username.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         username.setForeground(new java.awt.Color(255, 255, 255));
         username.setToolTipText("");
@@ -77,7 +72,7 @@ public class SignIn extends javax.swing.JFrame {
         });
         signInPanel.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 380, 31));
 
-        pass.setBackground(new java.awt.Color(0,0,0,0));
+        pass.setBackground(new java.awt.Color(0, 0, 0, 0));
         pass.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         pass.setForeground(new java.awt.Color(255, 255, 255));
         pass.setToolTipText("");
@@ -140,7 +135,7 @@ public class SignIn extends javax.swing.JFrame {
 
         icon.setFont(new java.awt.Font("Candara", 0, 24)); // NOI18N
         icon.setForeground(new java.awt.Color(204, 204, 204));
-        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/signup/user-50.png"))); // NOI18N
+        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-50.png"))); // NOI18N
         signInPanel.add(icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 60, 50, 50));
 
         orLabel.setForeground(new java.awt.Color(204, 204, 204));
@@ -156,7 +151,7 @@ public class SignIn extends javax.swing.JFrame {
         headline.setText("TrainBrain");
         signInPanel.add(headline, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 120, 40));
 
-        btn_exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/signup/delete-25.png"))); // NOI18N
+        btn_exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete-25.png"))); // NOI18N
         btn_exit.setToolTipText("");
         btn_exit.setDoubleBuffered(true);
         btn_exit.setFocusPainted(false);
@@ -182,55 +177,55 @@ public class SignIn extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void passActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passActionPerformed
+    private void passActionPerformed(ActionEvent evt) {//GEN-FIRST:event_passActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_passActionPerformed
 
-    private void usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
+    private void usernameActionPerformed(ActionEvent evt) {//GEN-FIRST:event_usernameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_usernameActionPerformed
 
-    private void signInPanelMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signInPanelMouseDragged
+    private void signInPanelMouseDragged(MouseEvent evt) {//GEN-FIRST:event_signInPanelMouseDragged
         new Drag(signInPanel).moveWindow(evt);
     }//GEN-LAST:event_signInPanelMouseDragged
 
-    private void signInPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signInPanelMousePressed
-        new Drag(signInPanel).onPress(evt);  
+    private void signInPanelMousePressed(MouseEvent evt) {//GEN-FIRST:event_signInPanelMousePressed
+        new Drag(signInPanel).onPress(evt);
     }//GEN-LAST:event_signInPanelMousePressed
 
-    private void btn_signInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_signInActionPerformed
+    private void btn_signInActionPerformed(ActionEvent evt) {//GEN-FIRST:event_btn_signInActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_signInActionPerformed
 
-    private void btn_signInMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_signInMouseClicked
+    private void btn_signInMouseClicked(MouseEvent evt) {//GEN-FIRST:event_btn_signInMouseClicked
         this.setVisible(false);
         maine.getMainWindow().setVisible(true);
     }//GEN-LAST:event_btn_signInMouseClicked
 
-    private void btn_exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_exitMouseClicked
+    private void btn_exitMouseClicked(MouseEvent evt) {//GEN-FIRST:event_btn_exitMouseClicked
         System.exit(0);
     }//GEN-LAST:event_btn_exitMouseClicked
 
-    private void btn_signUpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_signUpMouseClicked
+    private void btn_signUpMouseClicked(MouseEvent evt) {//GEN-FIRST:event_btn_signUpMouseClicked
         this.setVisible(false);
         signUp.getSignUp().setVisible(true);
     }//GEN-LAST:event_btn_signUpMouseClicked
 
     MainWindow maine = new MainWindow();
     SignUp signUp = new SignUp();
-    
-    public SignIn getSignIn(){
+
+    public SignIn getSignIn() {
         return this;
     }
-    
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -251,7 +246,7 @@ public class SignIn extends javax.swing.JFrame {
         //</editor-fold>
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-               new SignIn().setVisible(true);
+                new SignIn().setVisible(true);
             }
         });
     }

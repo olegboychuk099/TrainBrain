@@ -1,14 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package signup;
 
 import keeptoo.Drag;
+import java.awt.event.*;
 
 /**
- *
  * @author Олег
  */
 public class SignUp extends javax.swing.JFrame {
@@ -61,7 +56,7 @@ public class SignUp extends javax.swing.JFrame {
         });
         signUpPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        mail.setBackground(new java.awt.Color(0,0,0,0));
+        mail.setBackground(new java.awt.Color(0, 0, 0, 0));
         mail.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         mail.setForeground(new java.awt.Color(255, 255, 255));
         mail.setToolTipText("");
@@ -97,7 +92,7 @@ public class SignUp extends javax.swing.JFrame {
 
         icon.setFont(new java.awt.Font("Candara", 0, 24)); // NOI18N
         icon.setForeground(new java.awt.Color(204, 204, 204));
-        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/signup/user-50.png"))); // NOI18N
+        icon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/user-50.png"))); // NOI18N
         signUpPanel.add(icon, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 30, 50, 50));
 
         userLabel.setForeground(new java.awt.Color(204, 204, 204));
@@ -109,7 +104,7 @@ public class SignUp extends javax.swing.JFrame {
         headline.setText("TrainBrain");
         signUpPanel.add(headline, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 120, 40));
 
-        btn_exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/signup/delete-25.png"))); // NOI18N
+        btn_exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete-25.png"))); // NOI18N
         btn_exit.setToolTipText("");
         btn_exit.setDoubleBuffered(true);
         btn_exit.setFocusPainted(false);
@@ -134,7 +129,7 @@ public class SignUp extends javax.swing.JFrame {
         passConfLabel.setText("confirm password");
         signUpPanel.add(passConfLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 310, -1, -1));
 
-        passConfirm.setBackground(new java.awt.Color(0,0,0,0));
+        passConfirm.setBackground(new java.awt.Color(0, 0, 0, 0));
         passConfirm.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         passConfirm.setForeground(new java.awt.Color(255, 255, 255));
         passConfirm.setToolTipText("");
@@ -143,7 +138,7 @@ public class SignUp extends javax.swing.JFrame {
         passConfirm.setOpaque(false);
         signUpPanel.add(passConfirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 330, 380, 31));
 
-        username.setBackground(new java.awt.Color(0,0,0,0));
+        username.setBackground(new java.awt.Color(0, 0, 0, 0));
         username.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         username.setForeground(new java.awt.Color(255, 255, 255));
         username.setToolTipText("");
@@ -153,7 +148,7 @@ public class SignUp extends javax.swing.JFrame {
         username.setPreferredSize(new java.awt.Dimension(69, 31));
         signUpPanel.add(username, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 380, 31));
 
-        pass.setBackground(new java.awt.Color(0,0,0,0));
+        pass.setBackground(new java.awt.Color(0, 0, 0, 0));
         pass.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         pass.setForeground(new java.awt.Color(255, 255, 255));
         pass.setToolTipText("");
@@ -170,55 +165,55 @@ public class SignUp extends javax.swing.JFrame {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 810, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(signUpPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 810, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 810, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(signUpPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 810, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 520, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(signUpPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 520, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                        .addGap(0, 0, Short.MAX_VALUE)
+                                        .addComponent(signUpPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_exitMouseClicked
+    private void btn_exitMouseClicked(MouseEvent evt) {//GEN-FIRST:event_btn_exitMouseClicked
         System.exit(0);
     }//GEN-LAST:event_btn_exitMouseClicked
 
-    private void signUpPanelMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpPanelMouseDragged
+    private void signUpPanelMouseDragged(MouseEvent evt) {//GEN-FIRST:event_signUpPanelMouseDragged
         new Drag(signUpPanel).moveWindow(evt);
     }//GEN-LAST:event_signUpPanelMouseDragged
 
-    private void signUpPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_signUpPanelMousePressed
+    private void signUpPanelMousePressed(MouseEvent evt) {//GEN-FIRST:event_signUpPanelMousePressed
         new Drag(signUpPanel).onPress(evt);
     }//GEN-LAST:event_signUpPanelMousePressed
 
-    private void btn_signUpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_signUpMouseClicked
-       this.setVisible(false);
-       maine.getMainWindow().setVisible(true);
+    private void btn_signUpMouseClicked(MouseEvent evt) {//GEN-FIRST:event_btn_signUpMouseClicked
+        this.setVisible(false);
+        maine.getMainWindow().setVisible(true);
     }//GEN-LAST:event_btn_signUpMouseClicked
 
-    public SignUp getSignUp(){
+    SignUp getSignUp() {
         return this;
     }
-    
+
     MainWindow maine = new MainWindow();
-    
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -242,11 +237,7 @@ public class SignUp extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new SignUp().setVisible(true);
-            }
-        });
+        java.awt.EventQueue.invokeLater(() -> new SignUp().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

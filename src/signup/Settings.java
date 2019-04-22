@@ -7,8 +7,9 @@ package signup;
 
 import keeptoo.Drag;
 
+import java.awt.event.*;
+
 /**
- *
  * @author Олег
  */
 public class Settings extends javax.swing.JFrame {
@@ -64,7 +65,7 @@ public class Settings extends javax.swing.JFrame {
         });
         settingPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btn_back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/signup/back-25.png"))); // NOI18N
+        btn_back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/back-25.png"))); // NOI18N
         btn_back.setToolTipText("");
         btn_back.setBorderPainted(false);
         btn_back.setEnabled(false);
@@ -95,7 +96,7 @@ public class Settings extends javax.swing.JFrame {
         secLabel.setText("  sec");
         settingPanel.add(secLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 220, 130, 20));
 
-        countQuest.setBackground(new java.awt.Color(0,0,0,0));
+        countQuest.setBackground(new java.awt.Color(0, 0, 0, 0));
         countQuest.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         countQuest.setForeground(new java.awt.Color(255, 255, 255));
         try {
@@ -114,7 +115,7 @@ public class Settings extends javax.swing.JFrame {
         });
         settingPanel.add(countQuest, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, 170, 50));
 
-        min.setBackground(new java.awt.Color(0,0,0,0));
+        min.setBackground(new java.awt.Color(0, 0, 0, 0));
         min.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         min.setForeground(new java.awt.Color(255, 255, 255));
         try {
@@ -152,10 +153,10 @@ public class Settings extends javax.swing.JFrame {
         headline_2.setText("TrainBrain");
         settingPanel.add(headline_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 120, 40));
 
-        type_cards.setBackground(new java.awt.Color(0,0,0,0));
+        type_cards.setBackground(new java.awt.Color(0, 0, 0, 0));
         type_cards.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         type_cards.setForeground(new java.awt.Color(255, 255, 255));
-        type_cards.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "All", "Food", "Drinks", "Animals" }));
+        type_cards.setModel(new javax.swing.DefaultComboBoxModel<>(new String[]{"All", "Food", "Drinks", "Animals"}));
         type_cards.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
         type_cards.setName(""); // NOI18N
         type_cards.setOpaque(false);
@@ -168,7 +169,7 @@ public class Settings extends javax.swing.JFrame {
         headline.setText("Setting");
         settingPanel.add(headline, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 60, 260, 50));
 
-        btn_exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/signup/delete-25.png"))); // NOI18N
+        btn_exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete-25.png"))); // NOI18N
         btn_exit.setToolTipText("");
         btn_exit.setDoubleBuffered(true);
         btn_exit.setFocusPainted(false);
@@ -195,7 +196,7 @@ public class Settings extends javax.swing.JFrame {
         minLabel.setText("min");
         settingPanel.add(minLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, 150, 20));
 
-        sec.setBackground(new java.awt.Color(0,0,0,0));
+        sec.setBackground(new java.awt.Color(0, 0, 0, 0));
         sec.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
         sec.setForeground(new java.awt.Color(255, 255, 255));
         try {
@@ -232,64 +233,66 @@ public class Settings extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 
-    private void btn_backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_backMouseClicked
+    private void btn_backMouseClicked(MouseEvent evt) {//GEN-FIRST:event_btn_backMouseClicked
         this.setVisible(false);
-        if(getSec()<10&&getSec()>=0)
-            maine.getTime().setText(getMin()+":0"+getSec());
-            else
-            maine.getTime().setText(getMin()+":"+getSec());
-        maine.getMainWindow().setVisible(true);
+        if (getSec() < 10 && getSec() >= 0)
+            mainWindow.getTime().setText(getMin() + ":0" + getSec());
+        else
+            mainWindow.getTime().setText(getMin() + ":" + getSec());
+        mainWindow.getMainWindow().setVisible(true);
     }//GEN-LAST:event_btn_backMouseClicked
 
-    private void settingPanelMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingPanelMouseDragged
+    private void settingPanelMouseDragged(MouseEvent evt) {//GEN-FIRST:event_settingPanelMouseDragged
         new Drag(settingPanel).moveWindow(evt);
     }//GEN-LAST:event_settingPanelMouseDragged
 
-    private void settingPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingPanelMousePressed
+    private void settingPanelMousePressed(MouseEvent evt) {//GEN-FIRST:event_settingPanelMousePressed
         new Drag(settingPanel).onPress(evt);
     }//GEN-LAST:event_settingPanelMousePressed
 
-    private void countQuestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_countQuestActionPerformed
+    private void countQuestActionPerformed(ActionEvent evt) {//GEN-FIRST:event_countQuestActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_countQuestActionPerformed
 
-    private void minActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_minActionPerformed
+    private void minActionPerformed(ActionEvent evt) {//GEN-FIRST:event_minActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_minActionPerformed
 
-    private void btn_exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_exitMouseClicked
-         System.exit(0);
+    private void btn_exitMouseClicked(MouseEvent evt) {//GEN-FIRST:event_btn_exitMouseClicked
+        System.exit(0);
     }//GEN-LAST:event_btn_exitMouseClicked
 
-    private void secActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_secActionPerformed
+    private void secActionPerformed(ActionEvent evt) {//GEN-FIRST:event_secActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_secActionPerformed
-    MainWindow maine = new MainWindow();
-    
-    public int getMin(){
+
+    MainWindow mainWindow = new MainWindow();
+
+    int getMin() {
         int minute;
-        try{
+        try {
             minute = Integer.parseInt(min.getText());
-        }catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             minute = 4;
         }
         return minute;
     }
-    public int getSec(){
+
+    int getSec() {
         int secund;
-        try{
+        try {
             secund = Integer.parseInt(sec.getText());
-        }catch(NumberFormatException e){
+        } catch (NumberFormatException e) {
             secund = 04;
         }
         return secund;
     }
-    
-    public static void main(String args[]) {
+
+    public static void main(String[] args) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -310,11 +313,7 @@ public class Settings extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Settings().setVisible(true);
-            }
-        });
+        java.awt.EventQueue.invokeLater(() -> new Settings().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

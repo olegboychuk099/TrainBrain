@@ -8,10 +8,11 @@ package signup;
 import java.util.Timer;
 import java.util.TimerTask;
 import javax.swing.JLabel;
+import java.awt.event.*;
+
 import keeptoo.Drag;
 
 /**
- *
  * @author Олег
  */
 public class MainWindow extends javax.swing.JFrame {
@@ -19,19 +20,19 @@ public class MainWindow extends javax.swing.JFrame {
     /**
      * Creates new form MainWindow
      */
-    
-    public MainWindow getMainWindow(){
+
+    MainWindow getMainWindow() {
         return this;
     }
-    
-    static Settings sett = new Settings();
-    Popup popup = new Popup();
-    
+
+    private static Settings sett = new Settings();
+    private Popup popup = new Popup();
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -52,14 +53,10 @@ public class MainWindow extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainWindow().setVisible(true);
-            }
-        });
+        java.awt.EventQueue.invokeLater(() -> new MainWindow().setVisible(true));
     }
-    
-    public MainWindow() {
+
+    MainWindow() {
         initComponents();
         this.setLocationRelativeTo(null);
     }
@@ -100,7 +97,7 @@ public class MainWindow extends javax.swing.JFrame {
         });
         mainPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btn_synchronize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/signup/synchronize-50.png"))); // NOI18N
+        btn_synchronize.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/synchronize-50.png"))); // NOI18N
         btn_synchronize.setToolTipText("");
         btn_synchronize.setEnabled(false);
         btn_synchronize.setFocusPainted(false);
@@ -127,7 +124,7 @@ public class MainWindow extends javax.swing.JFrame {
         mainPanel.add(btn_synchronize, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 210, 60, 150));
 
         btn_setting.setBorder(null);
-        btn_setting.setIcon(new javax.swing.ImageIcon(getClass().getResource("/signup/settings-50.png"))); // NOI18N
+        btn_setting.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/settings-50.png"))); // NOI18N
         btn_setting.setToolTipText("");
         btn_setting.setEnabled(false);
         btn_setting.setFocusable(false);
@@ -162,7 +159,7 @@ public class MainWindow extends javax.swing.JFrame {
         mainPanel.add(headline, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 60, 260, 50));
 
         btn_play.setBorder(null);
-        btn_play.setIcon(new javax.swing.ImageIcon(getClass().getResource("/signup/play-50.png"))); // NOI18N
+        btn_play.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/play-50.png"))); // NOI18N
         btn_play.setToolTipText("");
         btn_play.setFocusable(false);
         btn_play.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -186,7 +183,7 @@ public class MainWindow extends javax.swing.JFrame {
         });
         mainPanel.add(btn_play, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 210, 60, 150));
 
-        btn_exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/signup/delete-25.png"))); // NOI18N
+        btn_exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete-25.png"))); // NOI18N
         btn_exit.setToolTipText("");
         btn_exit.setDoubleBuffered(true);
         btn_exit.setFocusPainted(false);
@@ -207,7 +204,7 @@ public class MainWindow extends javax.swing.JFrame {
         });
         mainPanel.add(btn_exit, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, 25, 60));
 
-        btn_mini.setIcon(new javax.swing.ImageIcon(getClass().getResource("/signup/minimize-25.png"))); // NOI18N
+        btn_mini.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/minimize-25.png"))); // NOI18N
         btn_mini.setToolTipText("");
         btn_mini.setBorderPainted(false);
         btn_mini.setEnabled(false);
@@ -237,60 +234,62 @@ public class MainWindow extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btn_synchronizeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_synchronizeActionPerformed
+    private void btn_synchronizeActionPerformed(ActionEvent evt) {//GEN-FIRST:event_btn_synchronizeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_synchronizeActionPerformed
 
-    private void mainPanelMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainPanelMouseDragged
+    private void mainPanelMouseDragged(MouseEvent evt) {//GEN-FIRST:event_mainPanelMouseDragged
         new Drag(mainPanel).moveWindow(evt);
     }//GEN-LAST:event_mainPanelMouseDragged
 
-    private void mainPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_mainPanelMousePressed
+    private void mainPanelMousePressed(MouseEvent evt) {//GEN-FIRST:event_mainPanelMousePressed
         new Drag(mainPanel).onPress(evt);
     }//GEN-LAST:event_mainPanelMousePressed
 
-    private void btn_playActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_playActionPerformed
+    private void btn_playActionPerformed(ActionEvent evt) {//GEN-FIRST:event_btn_playActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_playActionPerformed
-    int min;
-    int sec;
-    Timer timer = null;
-    private void btn_playMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_playMouseClicked
-        if(timer!=null)
-        timer.cancel();
-        timer=null;
+
+    private int min;
+    private int sec;
+    private Timer timer = null;
+
+    private void btn_playMouseClicked(MouseEvent evt) {//GEN-FIRST:event_btn_playMouseClicked
+        if (timer != null)
+            timer.cancel();
+        timer = null;
         int delay = 1000;
         int period = 1000;
-        if(timer==null)
-        timer = new Timer();
+        if (timer == null)
+            timer = new Timer();
         min = sett.getMin();
         sec = sett.getSec();
         timer.scheduleAtFixedRate(new TimerTask() {
-        public void run() {
-            time(timer);
-            if(sec<10&&sec>=0)
-            time.setText(min+":0"+sec);
-            else
-            time.setText(min+":"+sec);
-        }
+            public void run() {
+                time(timer);
+                if (sec < 10 && sec >= 0)
+                    time.setText(min + ":0" + sec);
+                else
+                    time.setText(min + ":" + sec);
+            }
         }, delay, period);
     }//GEN-LAST:event_btn_playMouseClicked
 
-    public JLabel getTime(){
+    JLabel getTime() {
         return time;
     }
-    
+
     private void btn_synchronizeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_synchronizeMouseClicked
-        if(timer!=null)
-        timer.cancel();
-        timer=null;
-        if(sett.getSec()<10&&sett.getSec()>=0)
-            time.setText(sett.getMin()+":0"+sett.getSec());
-            else
-            time.setText(sett.getMin()+":"+sett.getSec());
+        if (timer != null)
+            timer.cancel();
+        timer = null;
+        if (sett.getSec() < 10 && sett.getSec() >= 0)
+            time.setText(sett.getMin() + ":0" + sett.getSec());
+        else
+            time.setText(sett.getMin() + ":" + sett.getSec());
     }//GEN-LAST:event_btn_synchronizeMouseClicked
-    
-    
+
+
     private void btn_settingMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_settingMouseClicked
         this.setVisible(false);
         sett.setVisible(true);
@@ -301,22 +300,21 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_exitMouseClicked
 
     private void btn_miniMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btn_miniMouseClicked
-        this.setState(ICONIFIED); 
+        this.setState(ICONIFIED);
     }//GEN-LAST:event_btn_miniMouseClicked
-    
-    private void time(Timer time){ 
-        if(sec!=0)
+
+    private void time(Timer time) {
+        if (sec != 0)
             --sec;
-        else if(min!=0){
-            sec=59;
+        else if (min != 0) {
+            sec = 59;
             --min;
-        }
-        else{
+        } else {
             time.cancel();
             popup.setVisible(true);
         }
     }
-        
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private keeptoo.KButton btn_exit;
@@ -326,6 +324,6 @@ public class MainWindow extends javax.swing.JFrame {
     private keeptoo.KButton btn_synchronize;
     private javax.swing.JLabel headline;
     private keeptoo.KGradientPanel mainPanel;
-    public javax.swing.JLabel time;
+    private javax.swing.JLabel time;
     // End of variables declaration//GEN-END:variables
 }

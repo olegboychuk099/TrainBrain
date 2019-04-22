@@ -122,7 +122,7 @@ public class Popup extends javax.swing.JFrame {
         btn_answer1.setkPressedColor(new java.awt.Color(255, 255, 255));
         popupPanel.add(btn_answer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 110, -1));
 
-        btn_exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/signup/delete-25.png"))); // NOI18N
+        btn_exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete-25.png"))); // NOI18N
         btn_exit.setToolTipText("");
         btn_exit.setDoubleBuffered(true);
         btn_exit.setFocusPainted(false);
